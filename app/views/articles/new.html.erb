@@ -1,0 +1,17 @@
+<h3>Articles</h3>
+
+<%= form_with(model: @article, local: true, data: {turbo: false}, url: articles_path) do |f|%>
+<p>
+<%= f.label :title%><br/>
+<%= f.text_field :title%>
+</p>
+<p>
+<%= f.label :text%><br/>
+<%= f.text_area :content%>
+</p>
+<p>
+<%= f.label :author%><br/>
+<%= f.text_field :author%>
+</p>
+<%= f.submit %>
+<% end %>
